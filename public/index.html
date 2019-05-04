@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Contact Manager</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+	<div id="app">
+		<br>
+		<b>
+			<h3 class="text-center">Contact Manager</h3>
+		</b>
+		<br>
+		<div class="container">
+			<div class="row">
+				<!-- Colomn kiri -->
+				<div class="col-4">
+					<div class="shadow p-3 mb-5 bg-white rounded">
+						<form id="input-form" method="POST">
+							<div class="form-group">
+								<label for="input-fullname"><strong>Full Name</strong></label>
+								<input type="string" class="form-control" id="input-fullname"
+									aria-describedby="fullNameHelp" placeholder="Enter Full Name" />
+							</div>
+							<div class="form-group">
+								<label for="input-phonenumber"><strong>Phone Number</strong></label>
+								<input type="integer" class="form-control" id="input-phonenumber"
+									aria-describedby="phoneNumberHelp" placeholder="Enter Phone Number" />
+							</div>
+							<div class="form-group">
+								<label for="input-email"><strong>Email Address</strong></label>
+								<input type="email" class="form-control" id="input-email" aria-describedby="emailHelp"
+									placeholder="yourmail@gmail.com" />
+							</div>
+							<div class="form-group">
+								<label for="input-gender">Gender</label>
+								<select class="form-control" id="input-gender">
+								  <option>Male</option>
+								  <option>Female</option>
+								</select>
+							</div>
+							<button type="button" class="btn btn-primary" id="submit">Submit</button>
+						</form>  <!-- end form-input-->
+					</div>
+				</div> <!-- end col-4 -->
+				<!-- colomn kanan -->
+				<div class="col-8">
+					<div class="shadow p-3 mb-5 bg-white rounded">
+						<form action="#" method="get" id="searchForm" class="input-group">
+							<div class="input-group-btn search-panel">
+								<select name="search_param" id="search_param" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<option value="fullname">Filter By Name</option>
+									<option value="gender">Filter By Gender</option>
+								</select>
+							</div>
+							<input type="text" class="form-control" name="x" placeholder="Search...">
+						</form><!-- end form -->
+						<div>
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Full Name</th>
+										<th scope="col">Phone Number</th>
+										<th scope="col">Email</th>
+										<th scope="col">Gender</th>
+										<th scope="col">&nbsp;</th>
+									</tr>
+								</thead>
+								<tbody id="table-rows"></tbody>
+							</table>
+						</div>
+					</div>
+				</div> <!-- end col-8-->
+			</div> <!-- end row-->
+		</div> <!-- end container-->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+		</script>
+		<script src="src/index.js">
+		</script>
+</body>
+
+</html>
